@@ -1,0 +1,147 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: content-box;
+}
+
+body {
+  background: grey;
+  width: 100vw;
+  height: 100vh;
+}
+.main {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: fit-content;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 1rem;
+  background: rgb(159, 213, 232);
+}
+table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+caption {
+  padding: 1rem;
+}
+
+tbody tr:nth-child(odd) {
+  background: rgb(95, 127, 196);
+  color: rgb(224, 224, 224);
+}
+
+tbody tr:nth-child(even) {
+  background-color: #a58c5b;
+  color: black;
+}
+
+tr:first-child > td:first-child {
+  border-top-left-radius: 1rem;
+}
+
+tr:first-child > td:last-child {
+  border-top-right-radius: 1rem;
+}
+
+tr:last-child td:first-child {
+  border-bottom-left-radius: 1rem;
+}
+
+tr:last-child > td:last-child {
+  border-bottom-right-radius: 1rem;
+}
+
+th,
+td {
+  padding: 1rem;
+}
+
+form {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  background: rgb(159, 213, 232);
+  padding: 2rem;
+  width: 400px;
+  border-radius: 1.5rem;
+  box-shadow: 0.5rem 0.5rem 0.5rem rgb(126, 126, 126);
+  visibility: hidden;
+}
+
+form > h2 {
+  text-align: center;
+}
+
+form > section {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+}
+
+form > section > input {
+  height: 2rem;
+  padding: 0rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 10rem;
+}
+
+form > section > input::-webkit-outer-spin-button,
+form > section > input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+form > section > input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+form > section > label {
+  padding: 0rem 1rem;
+  padding-bottom: 0.3rem;
+}
+
+form > section > span {
+  color: rgb(214, 0, 0);
+  text-align: right;
+  padding-right: 0.5rem;
+  padding-top: 0.3rem;
+  visibility: hidden;
+}
+.buttons-container {
+  padding-top: 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+button {
+  border: none;
+  color: rgb(233, 233, 233);
+}
+
+.main > button,
+.buttons-container > button {
+  width: 5rem;
+  height: 2rem;
+  margin: 0 1rem;
+  border-radius: 1rem;
+  box-shadow: 0.3rem 0.3rem 0.3rem rgb(126, 126, 126);
+  background: rgb(95, 127, 196);
+}
+
+.del-button {
+  background: rgb(188, 0, 0);
+  padding: 0.1rem 0.3rem;
+  border-radius: 0.3rem;
+}
+
+button:active {
+  box-shadow: 0.15rem 0.15rem 0.15rem rgb(126, 126, 126);
+}

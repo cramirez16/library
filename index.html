@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="main">
+        <table>
+            <caption>
+                <h2>Book Store</h2>
+            </caption>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Pages</th>
+                    <th>Read</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <button id="btn-new-book">Add Book</button>
+    </div>
+    <form action="">
+        <h2>New Book</h2>
+        <section id="seccion-title">
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title">
+            <span>please, provide a title</span>
+        </section>
+        <section id="seccion-author">
+            <label for="author">Author</label>
+            <input type="text" id="author" name="author">
+            <span>please, provide an author</span>
+        </section>
+        <section id="seccion-pages">
+            <label for="pages">Pages</label>
+            <input type="number" id="pages" name="pages">
+            <span>please, provide number of pages</span>
+        </section>
+        <div class="buttons-container">
+            <button type="button" id="save">Save</button>
+            <button type="button" id="cancel">Cancel</button>
+        </div>
+    </form>
+    <script src="main.js"></script>
+</body>
+
+</html>
